@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecVault v3.0 — Zero-Knowledge Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css?v=3">
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="logo">
+                <div class="logo-icon">🔐</div>
+                <div class="logo-text">Sec<span>Vault</span></div>
+                <div class="logo-version">v3.0</div>
+            </div>
+            
+            <div class="title">Zero-Knowledge File Vault</div>
+            <div class="sub">// PIN-protected session keys</div>
+            
+            <div class="info">
+                <div class="info-title">🔐 Enterprise-Grade Security</div>
+                <p>
+                    • <code>Argon2id (64MB)</code> — Memory-hard GPU-resistant KDF<br>
+                    • <code>PIN Protection</code> — Session keys encrypted in browser<br>
+                    • <code>Ed25519</code> — Digital signatures for non-repudiation<br>
+                    • <code>AES-256-GCM + AAD</code> — Authenticated encryption<br>
+                    • <code>X25519</code> — Perfect forward secrecy<br>
+                    • <strong>Zero-knowledge</strong> — Server never sees your data or PIN
+                </p>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <a href="/login.html" class="btn btn-primary" style="text-decoration: none;">
+                    Sign In
+                </a>
+                <a href="/register.html" class="btn btn-secondary" style="text-decoration: none;">
+                    Create Account
+                </a>
+            </div>
+            
+            <div class="info" style="margin-top: 2rem;">
+                <div class="info-title">🔒 Dual-Layer Protection</div>
+                <p>
+                    <strong>Master Password:</strong> Authenticates with server (never stored plaintext)<br>
+                    <strong>Session PIN:</strong> Encrypts keys in your browser session<br><br>
+                    Even if server is compromised, your files remain encrypted.<br>
+                    Even if browser is compromised, keys are PIN-protected.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="toast-container"></div>
+</body>
+</html>
